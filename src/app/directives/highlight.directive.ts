@@ -10,9 +10,6 @@ export class HighlightDirective {
 
   constructor(private el: ElementRef) { 
   }
-
-  //añado control de eventos sobre los elementos que 
-  //se les aplique la directiva
   @HostListener('mouseenter') onMouseEnter() {
     this.el.nativeElement.style.border='1px solid black';
     let el=(this.el.nativeElement) as HTMLElement;

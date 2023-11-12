@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeService } from './services/theme.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -28,7 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 const appearance: MatFormFieldDefaultOptions = {
-    appearance: 'outline', // Puedes cambiar a 'fill' o 'legacy' según tus preferencias
+    appearance: 'outline', 
 };
 
 @NgModule({
@@ -81,6 +82,12 @@ const appearance: MatFormFieldDefaultOptions = {
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
             }
+        }),
+        ServiceWorkerModule.register('ngsw-worker.js', {
+          enabled: !isDevMode(),
+          // Register the ServiceWorker as soon as the application is stable
+          // or after 30 seconds (whichever comes first).
+          registrationStrategy: 'registerWhenStable:30000'
         }),
     ]
 })

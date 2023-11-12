@@ -3,15 +3,15 @@
   <div  style="background-color:rgba(255, 255, 255, 0.719); padding:20px 30px; border-radius:10px; border:1px solid black">
 <form [formGroup]="form" (ngSubmit)="submit()">
   <div class="form-group">
-    <label>Título</label>
+    <label>{{"Titulo" | translate}}</label>
     <input #title type="text" class="form-control" formControlName="title" placeholder="Título">
   </div>
   <div class="form-group">
-    <label>Descripción</label>
+    <label>{{"Descripcion" | translate}}</label>
     <input type="text" class="form-control" formControlName="description" placeholder="Descripción">
   </div>
   <input type="hidden" formControlName="id">
-  <button type="submit" class="btn btn-primary" [disabled]="form.status!='VALID'">Guardar</button>
+  <button type="submit" class="btn btn-primary" [disabled]="form.status!='VALID'">{{"Guardar" | translate}}</button>
 </form>
 </div>
 </div>

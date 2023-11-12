@@ -5,11 +5,12 @@
     "Cerrar Sesion":"LogOut",
     "Configuracion":"Settings",
     "Inicio":"Home",
-    "Notas":"Notes",
+    "Nueva nota":"New note",
     "Guardar":"Save",
-    "Acerca de Notea":"About Notes Website",
+    "Acerca de ":"About ",
     "Bienvenido a la Web Notas":"Welcome to Notes Web",
-    "Cuenta":"Account"
-
-
+    "Cuenta":"Account",
+    "Español":"Spanish",
+    "Inglés":"English",
+    "Cambiar tema":"Change theme"
 }

@@ -17,18 +17,18 @@ export class LoginGuard implements CanActivate {
 
       let result=false;
       if(!mockLogin){
-        //Not Logged
+  
         if(route.url[0].toString()!='login'){
-          //you're not logged?, ---> not alowed --> go login
+
           this.loginS.originalPath=route.url[0].toString();
           this.router.navigate(['/login']);
         }else{
           result=true;
         }
       }else{
-        //Logged
+
         if(route.url[0].toString()=='login'){
-          //again in login?, ---> not alowed
+      
           this.router.navigate(['']);
         }else{
           result=true;

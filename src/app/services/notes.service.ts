@@ -15,7 +15,6 @@ export class NotesService {
   constructor(private db: AngularFirestore, private loginS: LoginService) {
     this.notesRef = db.collection(this.dbPath);
 
-    // Cargar todas las notas del servidor al iniciar el servicio
     this.loadNotes();
   }
 
@@ -29,7 +28,7 @@ export class NotesService {
   }
 
   public async createNote(newNote: INote) {
-    // Asociar la nota con el id_user del usuario actual
+
     newNote.id_user = this.loginS.user?.id_user || '';
     
     try {
@@ -51,7 +50,7 @@ export class NotesService {
   }
 
   public getNotes(): INote[] {
-    // Filtrar notas por el id_user del usuario actual
+
     return this.notes.filter((note) => note.id_user === this.loginS.user?.id_user);
   }
 

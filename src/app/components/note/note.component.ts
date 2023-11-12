@@ -35,5 +35,6 @@ export class NoteComponent implements OnInit {
     if(this.note.id==-1) return;
     this.removeNote.emit(this.note);
   }
+  
 
 }
