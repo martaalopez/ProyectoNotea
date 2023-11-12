@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .main-container {
+      background-color: #4286f4;
+      color: white;
+      padding: 20px;
+    }
+
+    .brand-name {
+      font-size: 3em;
+      font-weight: bold;
+    }
+
+    .header-section {
+      padding: 20px 0;
+    }
+
+    .reviews-section {
+      padding: 20px 0;
+    }
+
+    .card {
+      border-radius: 20px;
+      box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+      background-color: white;
+      margin-bottom: 40px;
+      padding: 20px; /* Añadido para dar más margen */
+    }
+
+    .full-width {
+      width: 100%;
+    }
+  </style>
+  <title>Notea</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="header-section">
+      <div class="row align-items-center">
+        <div class="col-md-4 col-12 text-center">
+          <h1 class="brand-name">NOTEA</h1>
+        </div>
+        <div class="col-md-8 col-12" style="padding: 20px 100px;">
+          <h2 class="mt-4">{{"Acerca de Notea" }}</h2>
+          <div>
+            Esta es una página web desarrollada en Angular con el objetivo de aprender a desarrollar aplicaciones web con
+            este framework. También se usa Firebase como base de datos para guardar las notas. Puedes iniciar sesión con tu cuenta de Google para aprender a crear tus notas.
+            Podrás crear notas, eliminarlas, editarlas y, además, gracias a tener iniciada sesión con Google, podrás descargar la app en tu teléfono y tener las notas sincronizadas.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-section">
+      <div class="row mt-3">
+        <div class="col-md-12 col-12 full-width">
+          <div class="card">
+            <div class="card-header">
+              <h2>{{"Valoraciones" }}</h2>
+              <h4>{{"Lo que dicen nuestros usuarios" }}</h4>
+            </div>
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col-md-3">
+                  <div class="card">
+                    <h5>Manuel García</h5>
+                    <p>¡La mejor aplicación para tomar notas! Fácil de usar y muy útil.</p>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <h5>Laura Martínez</h5>
+                    <p>
+                    Me encanta la sincronización con Google, puedo acceder a mis notas desde cualquier lugar.</p>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <h5>Juan Pérez</h5>
+                    <p>Increíble aplicación, me ha facilitado mucho la organización de mis tareas.</p>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <h5>Marta González</h5>
+                    <p>Esta aplicación ha cambiado mi forma de tomar notas. ¡Es fácil de usar y extremadamente útil!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+

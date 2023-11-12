@@ -1,0 +1,72 @@
+ <nav class="navbar navbar-expand-lg" [ngClass]="{ 'bg-light': (themeService.currentTheme | async) === 'light', 'bg-dark text-light': (themeService.currentTheme | async) === 'dark' }">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="#">
+    <img style="width:20%;height:0%;" src="./assets/icons/logoN-removebg-preview.png" alt="Error">
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-
+  toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-
+  controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle
+  navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav">
+  <a class="nav-link active" aria-current="page"
+  routerLink="/">{{"Inicio" | translate}}</a>
+  <a class="nav-link" routerLink="/new">{{"Nueva nota" | translate}}</a>
+  <a class="nav-link" routerLink="/about">{{"Acerca de " | translate}}</a>
+  <li class="nav-item dropdown" *ngIf="this.loginS.user">
+  <a class="nav-link dropdown-toggle" href="#" role="button"
+  data-bs-toggle="dropdown" aria-expanded="false">
+  {{"Cuenta" | translate}}
+  </a>
+  <ul class="dropdown-menu" >
+  <li> <span
+  style="padding:10px;">{{this.loginS.user!.name}}</span></li>
+  <li> <span
+  style="padding:10px;">{{this.loginS.user!.email}}</span></li>
+  <li><hr class="dropdown-divider"></li>
+  <li><a class="dropdown-item" href="#" (click)="logout()" >
+    {{"Logout" | translate}} </a></li>
+  </ul>
+  </li>
+  </div>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-translate"
+        viewBox="0 0 16 16">
+        <path
+          d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z">
+        </path>
+        <path
+          d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z">
+        </path>
+      </svg>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li class="nav-item">
+        <button class="btn" (click)="cambiarEspanol()">
+          Español
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="btn" (click)="changeToEnglish()">
+        Inglés
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar-nav ml-auto" [ngClass]="{ 'light-theme': (themeService.currentTheme | async) === 'light', 'dark-theme': (themeService.currentTheme | async) === 'dark' }">
+    <div class="theme-toggle">
+      <button mat-button (click)="toggleTheme()" class="btn btn-theme-toggle">
+        {{"Cambiar tema " | translate}}
+      </button>
+    </div>
+  </div>
+ 
+  </div>
+  </nav>
+
+  

@@ -1,0 +1,16 @@
+/* styles.css */
+body {
+    transition: background-color 0.5s ease;
+}
+  
+/* navbar.component.css */
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .dark-theme {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
